@@ -3,7 +3,7 @@ name: Destroy Pulumi Stack with OIDC
 on:
   push:
     branches:
-      - dev
+      - main
   workflow_dispatch:
 
 jobs:
