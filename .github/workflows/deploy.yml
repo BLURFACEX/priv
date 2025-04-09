@@ -3,7 +3,7 @@ name: main
 on:
   push:
     branches:
-      - dev
+      - main
   workflow_dispatch:
 
 jobs:
@@ -30,8 +30,8 @@ jobs:
       - name: Configure AWS credentials using OIDC
         uses: aws-actions/configure-aws-credentials@v2
         with:
-          role-to-assume: arn:aws:iam::975050105141:role/PulumiOIDCRole
-          aws-region: us-west-2
+          role-to-assume: arn:aws:iam::600627364901:role/PulumiOIDCRole
+          aws-region: us-east-1
 
       - name: Pulumi Deploy using ESC
         uses: pulumi/actions@v5
