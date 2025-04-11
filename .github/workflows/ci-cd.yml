@@ -30,7 +30,7 @@ jobs:
     - name: Build and push Docker image
       env:
         ECR_REGISTRY: 600627364901.dkr.ecr.ca-central-1.amazonaws.com
-        ECR_REPOSITORY: pal-inft1210-app
+        ECR_REPOSITORY: pal-ecr
         IMAGE_TAG: latest
       run: |
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
