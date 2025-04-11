@@ -4,7 +4,7 @@
     "containerDefinitions": [
       {
         "name": "pal-container",
-        "image": "975050105141.dkr.ecr.ca-central-1.amazonaws.com/pal-inft1210-app",
+        "image": "600627364901.dkr.ecr.ca-central-1.amazonaws.com/pal-inft1210-app",
         "essential": true,
         "portMappings": [
           {
@@ -25,6 +25,6 @@
     "requiresCompatibilities": ["FARGATE"],
     "cpu": "256",
     "memory": "512",
-    "executionRoleArn": "arn:aws:iam::975050105141:role/ecsTaskExecutionRole",
-    "taskRoleArn": "arn:aws:iam::975050105141:role/ecsTaskExecutionRole"
+    "executionRoleArn": "arn:aws:iam::600627364901:role/ecsTaskExecutionRole",
+    "taskRoleArn": "arn:aws:iam::600627364901:role/ecsTaskExecutionRole"
   }
