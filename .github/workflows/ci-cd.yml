@@ -46,7 +46,7 @@ jobs:
           aws ecs create-service \
             --cluster pal-cluster \
             --service-name pal-final-service \
-            --task-definition pal-task \
+            --task-definition inft1210-task \
             --desired-count 2 \
             --launch-type FARGATE \
             --network-configuration "awsvpcConfiguration={subnets=[subnet-0f04897d52d6a6d4a,subnet-0b9e3010f2d3107f6],securityGroups=[sg-0df550e0dd4956cfc],assignPublicIp=DISABLED}" \
