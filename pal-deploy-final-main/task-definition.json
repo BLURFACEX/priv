@@ -1,0 +1,30 @@
+{
+    "family": "inft1210-task",
+    "networkMode": "awsvpc",
+    "containerDefinitions": [
+      {
+        "name": "pal-container",
+        "image": "975050105141.dkr.ecr.ca-central-1.amazonaws.com/pal-inft1210-app",
+        "essential": true,
+        "portMappings": [
+          {
+            "containerPort": 5000,
+            "hostPort": 5000
+          }
+        ],
+        "logConfiguration": {
+          "logDriver": "awslogs",
+          "options": {
+            "awslogs-group": "inft1210-logs",
+            "awslogs-region": "ca-central-1",
+            "awslogs-stream-prefix": "ecs"
+          }
+        }
+      }
+    ],
+    "requiresCompatibilities": ["FARGATE"],
+    "cpu": "256",
+    "memory": "512",
+    "executionRoleArn": "arn:aws:iam::975050105141:role/ecsTaskExecutionRole",
+    "taskRoleArn": "arn:aws:iam::975050105141:role/ecsTaskExecutionRole"
+  }
