@@ -4,7 +4,7 @@
     "containerDefinitions": [
       {
         "name": "pal-container",
-        "image": "600627364901.dkr.ecr.ca-central-1.amazonaws.com/pal-inft1210-app",
+        "image": "600627364901.dkr.ecr.ca-central-1.amazonaws.com/pal-ecr",
         "essential": true,
         "portMappings": [
           {
