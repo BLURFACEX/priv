@@ -48,10 +48,10 @@ jobs:
             --service-name pal-final-service \
             --task-definition inft1210-task \
             --desired-count 2 \
-            launch-type FARGATE \
-          --network-configuration "awsvpcConfiguration={subnets=[subnet-0bbb6c5eca170528a,subnet-06f71e5993d0234b3],securityGroups=[sg-0869b4181940a526b],assignPublicIp=DISABLED}" \
-          --load-balancers "targetGroupArn=arn:aws:elasticloadbalancing:ca-central-1:600627364901:targetgroup/pal-PalALBTa-KRYP8YDZVY5H/5835464097f4aeac,containerName=pal-container,containerPort=5000" \
-          --region ca-central-1
+            --launch-type FARGATE \
+            --network-configuration "awsvpcConfiguration={subnets=[subnet-0bbb6c5eca170528a,subnet-06f71e5993d0234b3],securityGroups=[sg-0869b4181940a526b],assignPublicIp=DISABLED}" \
+            --load-balancers "targetGroupArn=arn:aws:elasticloadbalancing:ca-central-1:600627364901:targetgroup/pal-PalALBTa-KRYP8YDZVY5H/5835464097f4aeac,containerName=pal-container,containerPort=5000" \
+            --region ca-central-1
         else
           echo "Service pal-final-service already exists, proceeding with deployment."
         fi
